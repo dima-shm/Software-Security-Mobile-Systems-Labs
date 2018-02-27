@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Lab_2.iml" filepath="$PROJECT_DIR$/Lab_2.iml" />
+      <module fileurl="file://C:\Users\dimas\Desktop\Lab_2\lab_2_encode\app.iml" filepath="C:\Users\dimas\Desktop\Lab_2\lab_2_encode\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab_2_decode/lab_2_decode.iml" filepath="$PROJECT_DIR$/lab_2_decode/lab_2_decode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab_2_encode/lab_2_encode.iml" filepath="$PROJECT_DIR$/lab_2_encode/lab_2_encode.iml" />
+    </modules>
+  </component>
+</project>

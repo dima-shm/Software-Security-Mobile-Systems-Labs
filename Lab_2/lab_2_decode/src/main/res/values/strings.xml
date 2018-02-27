@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">lab_2_decode</string>
+    <string name="enter_encoded_text">Enter encoded text</string>
+    <string name="decoded_text">Decoded text</string>
+    <string name="decode">Decode</string>
+</resources>
