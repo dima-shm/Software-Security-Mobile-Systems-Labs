@@ -62,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClickEncode(View view) {
-        EditText etext = findViewById(R.id.text);
-        String text = etext.getText().toString();
+        String text = mText.getText().toString();
 
 
         SecretKeySpec secretKey = generateSecretKey();
@@ -74,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         byte[] encodedBytes = encodeText(secretKey, text);
 
 
-        EditText encoded = findViewById(R.id.encoded_text);
-        encoded.setText(Base64.encodeToString(encodedBytes, Base64.DEFAULT));
+        mEncodedText.setText(Base64.encodeToString(encodedBytes, Base64.DEFAULT));
     }
 }
