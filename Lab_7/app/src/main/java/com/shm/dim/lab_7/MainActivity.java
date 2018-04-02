@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         links.add("http://yandex.ru");
         links.add("http://google.ru");
         links.add("http://vk.com");
+        links.add("http://mail.ru");
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, links);
         mListView.setAdapter(arrayAdapter);
