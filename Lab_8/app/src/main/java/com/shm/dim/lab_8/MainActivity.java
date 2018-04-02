@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     private ListView mListView;
@@ -19,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         mListView = findViewById(R.id.list);
 
-        String[] values = { "UK", "USA", "France", "Germany", "Belarus", "Spain" };
+        final String[] values = { "UK", "USA", "France", "Germany", "Belarus", "Spain" };
+        shuffleArray(values);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, values);
@@ -29,30 +32,20 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 int position = arg2;
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                switch(position)
-                {
-                    case 0:
-                        intent.putExtra("COUNTRY", new String[] {"London", "Brighton", "Manchester", "Liverpool"});
-                        break;
-                    case 1:
-                        intent.putExtra("COUNTRY", new String[] {"New York", "Los Angeles", "Chicago", "Phoenix"});
-                        break;
-                    case 2:
-                        intent.putExtra("COUNTRY", new String[] {"Paris", "Marseille", "Lyon", "Nice"});
-                        break;
-                    case 3:
-                        intent.putExtra("COUNTRY", new String[] {"Berlin", "München", "Mecklenburg", "Düsseldorf"});
-                        break;
-                    case 4:
-                        intent.putExtra("COUNTRY", new String[] {"Minsk", "Vitebsk", "Gomel", "Zhodino"});
-                        break;
-                    case 5:
-                        intent.putExtra("COUNTRY", new String[] {"Madrid", "Barcelona", "Valencia", "Palma de Mallorca"});
-                        break;
-                }
+                intent.putExtra("COUNTRY", values[position]);
                 startActivity(intent);
             }
         });
     }
 
+    public void shuffleArray(String[] ar) {
+        Random rnd = new Random();
+        for (int i = ar.length - 1; i > 0; i--) {
+            int index = rnd.nextInt(i + 1);
+
+            String a = ar[index];
+            ar[index] = ar[i];
+            ar[i] = a;
+        }
+    }
 }
