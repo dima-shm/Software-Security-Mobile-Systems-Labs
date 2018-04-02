@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab_5</string>
+    <string name="name">Name</string>
+    <string name="grade">Grade</string>
+    <string name="address">Address</string>
+    <string name="add_name">Add Name</string>
+    <string name="retrieve_students">Retrieve Students</string>
+</resources>
