@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Lab_9</string>
+    <string name="send_sms">send sms</string>
+    <string name="enter_message_text">Enter message text</string>
+    <string name="enter_phone_number">Enter phone number</string>
+</resources>
