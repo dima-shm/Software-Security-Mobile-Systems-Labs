@@ -7,57 +7,74 @@
     android:padding="15dp"
     tools:context="com.shm.dim.lab_10.MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="vertical">
+        android:layout_centerVertical="true">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/select_language"/>
+            android:orientation="vertical">
 
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/language_group">
-            <RadioButton
-                android:id="@+id/english"
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/english"
-                android:checked="true" />
-            <RadioButton
-                android:id="@+id/french"
-                android:layout_width="wrap_content"
+                android:text="@string/select_sms_message"/>
+
+            <ListView
+                android:id="@+id/sms_list"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="15dp">
+            </ListView>
+
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/france"
-                android:checked="false" />
-            <RadioButton
-                android:id="@+id/german"
-                android:layout_width="wrap_content"
+                android:text="@string/select_language"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/german"
-                android:checked="false" />
-        </RadioGroup>
+                android:id="@+id/language_group">
+                <RadioButton
+                    android:id="@+id/english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/english"
+                    android:checked="true" />
+                <RadioButton
+                    android:id="@+id/french"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/france"
+                    android:checked="false" />
+                <RadioButton
+                    android:id="@+id/german"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/german"
+                    android:checked="false" />
+            </RadioGroup>
 
-        <EditText
-            android:id="@+id/text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/enter_text"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            <EditText
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <Button
-            android:id="@+id/speak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="@string/speak"
-            android:onClick="speakOnClick"/>
+            <Button
+                android:id="@+id/speak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/speak"
+                android:onClick="speakOnClick"/>
 
-    </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
