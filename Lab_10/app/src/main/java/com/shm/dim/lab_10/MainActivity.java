@@ -89,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
     private Locale getUserSelectedLanguage() {
         int checkedRadioId = mLanguageGroup.getCheckedRadioButtonId();
         switch (checkedRadioId) {
+            case R.id.russian:
+                return new Locale("ru");
             case R.id.english:
                 return Locale.ENGLISH;
             case R.id.french:

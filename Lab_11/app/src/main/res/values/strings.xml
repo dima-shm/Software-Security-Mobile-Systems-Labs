@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lab_11</string>
+    <string name="speech_prompt">Say something&#8230;</string>
+    <string name="tap_to_speak">Tap to speak</string>
+</resources>

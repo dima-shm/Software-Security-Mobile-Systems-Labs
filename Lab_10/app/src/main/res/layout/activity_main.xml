@@ -39,11 +39,16 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/language_group">
                 <RadioButton
+                    android:id="@+id/russian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/russian"
+                    android:checked="true" />
+                <RadioButton
                     android:id="@+id/english"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/english"
-                    android:checked="true" />
+                    android:text="@string/english" />
                 <RadioButton
                     android:id="@+id/french"
                     android:layout_width="wrap_content"
