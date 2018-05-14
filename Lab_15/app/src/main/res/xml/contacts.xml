@@ -1,0 +1,18 @@
+<contacts>
+    <contact
+        first_name="Иван"
+        last_name="Иванов"
+        phone="291231212"/>
+    <contact
+        first_name="Петр"
+        last_name="Петров"
+        phone="251231313"/>
+    <contact
+        first_name="Алексей"
+        last_name="Алексеев"
+        phone="294561234"/>
+    <contact
+        first_name="Ольга"
+        last_name="Плюхина"
+        phone="337895618"/>
+</contacts>
