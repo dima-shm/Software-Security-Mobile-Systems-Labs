@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context="com.shm.dim.lab_16.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/pane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery"
+            android:layout_weight="1"
+            android:onClick="onClickGallery"/>
+
+        <Button
+            android:id="@+id/buttonBall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ball"
+            android:layout_weight="1"
+            android:onClick="onClickBall"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/gallery_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/pane"/>
+
+    <FrameLayout
+        android:id="@+id/ball_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/gallery_fragment"/>
+
+</RelativeLayout>
