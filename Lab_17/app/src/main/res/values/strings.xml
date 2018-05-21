@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lab_17</string>
+    <string name="run">Run</string>
+    <string name="enter_command">Enter command...</string>
+</resources>
