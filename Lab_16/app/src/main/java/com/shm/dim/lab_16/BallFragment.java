@@ -1,5 +1,6 @@
 package com.shm.dim.lab_16;
 
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.app.Fragment;
@@ -15,9 +16,8 @@ import java.util.concurrent.TimeUnit;
 
 public class BallFragment extends Fragment {
 
-    TextView mTimer;
-    ImageView mImage;
-
+    private TextView mTimer;
+    private ImageView mImage1, mImage2;
     public BallFragment() {
 
     }
@@ -28,23 +28,20 @@ public class BallFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_ball, container, false);
 
         mTimer = view.findViewById(R.id.timer);
-        mImage = view.findViewById(R.id.image);
+        mImage1 = view.findViewById(R.id.image_1);
+        mImage2 = view.findViewById(R.id.image_2);
 
-        startTimer();
-
-        ObjectAnimator animation1 = new ObjectAnimator()
-                .ofFloat(mImage, "rotation", 0f, 360f)
-                .setDuration(3000);
-        animation1.start();
+        startAnimation(3000);
+        startTimer(3000, 1000);
 
         return view;
     }
 
-    private void startTimer() {
+    private void startTimer(int duration, int step) {
 
         final String FORMAT = "%02d:%02d:%02d";
 
-        new CountDownTimer(3000, 1000) {
+        new CountDownTimer(duration, step) {
             @SuppressLint("DefaultLocale")
             public void onTick(long millisUntilFinished) {
                 mTimer.setText(String.format(FORMAT,
@@ -57,5 +54,18 @@ public class BallFragment extends Fragment {
                 mTimer.setText("");
             }
         }.start();
+    }
+
+    private void startAnimation(int duration) {
+        ObjectAnimator animation1 = new ObjectAnimator()
+                .ofFloat(mImage1, "rotation", 0f, 360f)
+                .setDuration(duration);
+        ObjectAnimator animation2 = new ObjectAnimator()
+                .ofFloat(mImage2, "rotation", 360f, 0f)
+                .setDuration(duration);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(animation1, animation2);
+        animatorSet.start();
     }
 }
