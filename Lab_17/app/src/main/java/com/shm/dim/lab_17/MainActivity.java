@@ -40,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
         try {
             process = Runtime.getRuntime().exec(commandValue);
             process.waitFor();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            while((result = bufferedReader.readLine()) != null){
-                output.append(result+"\n");
+            try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
+                while ((result = bufferedReader.readLine()) != null) {
+                    output.append(result + "\n");
+                }
             }
         } catch (IOException | InterruptedException e){
             return e.getMessage();
