@@ -29,13 +29,15 @@
 
     </LinearLayout>
 
-    <FrameLayout
+    <fragment
+        android:name="com.shm.dim.lab_16.GalleryFragment"
         android:id="@+id/gallery_fragment"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:layout_below="@id/pane"/>
 
-    <FrameLayout
+    <fragment
+        android:name="com.shm.dim.lab_16.BallFragment"
         android:id="@+id/ball_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

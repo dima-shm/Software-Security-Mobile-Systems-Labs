@@ -15,8 +15,7 @@ import android.widget.ImageView.ScaleType;
 public class MainActivity extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
@@ -24,14 +23,14 @@ public class MainActivity extends Activity {
     public void onClickGallery(View view) {
         getFragmentManager()
                 .beginTransaction()
-                .add(R.id.gallery_fragment, new GalleryFragment())
+                .replace(R.id.gallery_fragment, new GalleryFragment())
                 .commit();
     }
 
     public void onClickBall(View view) {
         getFragmentManager()
                 .beginTransaction()
-                .add(R.id.ball_fragment, new BallFragment())
+                .replace(R.id.ball_fragment, new BallFragment())
                 .commit();
     }
 }
