@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lab_18</string>
+    <string name="key">Key</string>
+    <string name="value">Value</string>
+    <string name="save">Save</string>
+    <string name="find_by_key">Find by key</string>
+</resources>
