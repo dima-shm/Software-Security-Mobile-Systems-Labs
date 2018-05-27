@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Lab_19_B</string>
+    <string name="privileged_activity_from_b">Privileged activity from B</string>
+    <string name="send_activity_a">send activity a</string>
+    <string name="send_privileged_activity_a">send privileged activity a</string>
+</resources>

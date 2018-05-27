@@ -1,0 +1,1 @@
+include ':lab_19_a', ':lab_19_b', ':lab_19_c'
